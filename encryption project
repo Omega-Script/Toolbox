@@ -1,0 +1,54 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+fileencrypt();
+textencrypt();
+folderencrypt();
+
+int main()
+{
+    cout << "What type of object would you like to encrypt such as text, file, or folder:\n";
+    cin >> object;
+
+    switch(object)
+    {
+        case "text":
+        {
+           sting message;
+           cout << "Typer the message to encrypt: "; cin >> message
+           textencrypt(message);
+        }
+        case "file":
+        {
+            string path;
+
+            cout << "Path to file: "; cin >> path; cout << endl;
+            cout << "Encryption Key: "; cin >> key; cout << endl;
+            fileencrypt(path, key);
+        }
+       case "folder":
+       {
+            cout << "Path and name of the folder: \n";
+            cout << "i.e. folder name is Samplefolder\n";
+            cout << "input would be: /root/Desktop/Samplefolder for linux\n";
+            cout << "or C:\Desktop\Samplefolder for Windows\n";
+            cin >> folderpath; cout << endl;
+	    cout << "Please enter the key: "; cin >> key; cout << endl;
+            folderencrypt(folderpath);
+       }
+
+    }
+    return 0;
+}
+
+void textencrypt(message)
+{
+}
+void fileencrypt(path,key)
+{
+}
+void folderencrypt(folderpath,key)
+{
+}
